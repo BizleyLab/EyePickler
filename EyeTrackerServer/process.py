@@ -45,4 +45,6 @@ fn = "15SI"
 dPath = "Data/"
 
 eye = et.EyeTracker(fn = dPath+fn)
-eye.processAll()
+eye.processAll(verb=False)
+
+df = eye.allToDF(objs=eye.objs[53006:54000], chunkSize=50, debug1=True)
